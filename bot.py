@@ -1,10 +1,10 @@
 import praw
 #praw is a python wrapper for the Reddit API
 print('\033[1m' + 'top' + '\033[0m')
-username="InformalAdeptness204"
-password="Cha9rewoodbridge"
-client_id="L-BcoXw9l662wqs5kHYc6g"
-client_secret = "pSWegJ-kJZQBYSuc60BHZ3tZKGKp6w"
+username=""
+password=""
+client_id=""
+client_secret = ""
 
 # remeber to replace the above values with your own values from reddit bot website
 
