@@ -28,37 +28,34 @@ print(reddit.user.me()) #prints the username of the bot
 
 subreddit = reddit.subreddit("learnpython") #specifying the subreddit to monitor, use your own subreddit of your choice
 print(subreddit)
-hot_25_submissions = subreddit.hot(limit=25) #the top 25 hot submissions in the subreddit of learnpython
+hot_25_submissions = subreddit.hot(limit=25) 
 for submission in hot_25_submissions:
-    print("Title: ", submission.title) # prints the title of the submission
-    print("Text: ", submission.selftext) # prints the text of the submission
-    print("Score: ", submission.score) # prints the score of the submission
-
-# The code above will read what is on the front page of the subreddit learnpython
-# now let's do the same for the other categories of the subreddit
+    print("Title: ", submission.title)
+    print("Text: ", submission.selftext) 
+    print("Score: ", submission.score) 
 
 
 print('\033[1m' + 'new' + '\033[0m') #special print statement to make the text bold
 new_25_submissions = subreddit.new(limit=25) #the top 25 new submissions in the subreddit of learnpython
 for submission in new_25_submissions:
-    print("Title: ", submission.title) # prints the title of the submission
-    print("Text: ", submission.selftext) # prints the text of the submission
-    print("Score: ", submission.score) # prints the score of the submission
+    print("Title: ", submission.title) 
+    print("Text: ", submission.selftext) 
+    print("Score: ", submission.score)
 
 print('\033[1m' + 'top' + '\033[0m')
 top_25_submissions = subreddit.top(limit=25, time_filter='all') #the top 25 top submissions in the subreddit of learnpython
 for submission in top_25_submissions:
-    print("Title: ", submission.title) # prints the title of the submission
-    print("Text: ", submission.selftext) # prints the text of the submission
-    print("Score: ", submission.score) # prints the score of the submission
+    print("Title: ", submission.title)
+    print("Text: ", submission.selftext)
+    print("Score: ", submission.score)
 
 
 print('\033[1m' + 'rising' + '\033[0m')
 rising_25_submissions = subreddit.rising(limit=25) #the top 25 rising submissions in the subreddit of learnpython
 for submission in rising_25_submissions:
-    print("Title: ", submission.title) # prints the title of the submission
-    print("Text: ", submission.selftext) # prints the text of the submission
-    print("Score: ", submission.score) # prints the score of the submission
+    print("Title: ", submission.title)
+    print("Text: ", submission.selftext)
+    print("Score: ", submission.score)
 
 print('\033[1m' + 'END' + '\033[0m')
 
@@ -68,19 +65,18 @@ subreddit = reddit.subreddit("testingground4bots") #specifying the subreddit to 
 print(subreddit)
 subreddit.submit("This is a test post", selftext="This is a test post by a bot, How are you?") 
 subreddit.submit("This is a test post 2", selftext="Happy New Year! 2025")
-#submitting a post to the subreddit
+
 # submit(title, description) is a function that submits a post to the subreddit
 
 # now we will comment on a post, or also fetch comments
 
-submission = reddit.submission("1hq2eye") # sample submission id, use whatever you want
-comments = submission.comments # url, find the mixed letter number value between comments and post title 
-print(submission.title) #prints the title of the submission
-print(submission.comments) #prints the comments of the submission, all of em
-# commentforrest is a function that prints the comments of the submission, read more about it in the documentation
-print(len(submission.comments)) #prints the number of comments in the submission
-comments.replace_more(limit=None) #replaces the more comments with the actual comments, increase comments
-print(len(submission.comments)) #prints the number of comments in the submission
+submission = reddit.submission("1hq2eye")
+comments = submission.comments 
+print(submission.title) 
+print(submission.comments) 
+print(len(submission.comments))
+comments.replace_more(limit=None)
+print(len(submission.comments)) 
 
 # ai response to comments using chatgpt and your API KEY
 
